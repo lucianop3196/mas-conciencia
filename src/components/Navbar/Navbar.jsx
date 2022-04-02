@@ -86,7 +86,7 @@ const Navbar = () => {
                         display: "block",
                         mx: 4,
                         color: "#89c51c",
-                        fontWeight: 'bold', 
+                        fontWeight: "1000",
                         "&:hover": {
                           color: "#afe34f",
                         },
@@ -123,19 +123,18 @@ const Navbar = () => {
                 to={page.route}
                 style={{ textDecoration: "none" }}
               >
-                {/*
-                    Para cambiar la font-family...
-                  https://stackoverflow.com/questions/48319372/changing-font-family-of-all-mui-components */}
                 <Button
                   onClick={handleCloseNavMenu}
                   sx={{
-                    my: 2,
                     display: "block",
                     mx: 4,
                     color: "#89c51c",
-                    fontWeight: 'bold', 
+                    fontWeight: "1000",
                     "&:hover": {
-                      color: "#afe34f",
+                      color: "action.hover",
+                    },
+                    "&:focus": {
+                      color: "action.focus",
                     },
                   }}
                 >
