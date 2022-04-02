@@ -81,7 +81,16 @@ const Navbar = () => {
                   <Link to={page.route} style={{ textDecoration: "none" }}>
                     <Typography
                       textAlign="center"
-                      sx={{ color: "primary.main" }}
+                      sx={{
+                        my: 2,
+                        display: "block",
+                        mx: 4,
+                        color: "#89c51c",
+                        fontWeight: 'bold', 
+                        "&:hover": {
+                          color: "#afe34f",
+                        },
+                      }}
                     >
                       {page.title}
                     </Typography>
@@ -123,7 +132,11 @@ const Navbar = () => {
                     my: 2,
                     display: "block",
                     mx: 4,
-                    color: "primary.main",
+                    color: "#89c51c",
+                    fontWeight: 'bold', 
+                    "&:hover": {
+                      color: "#afe34f",
+                    },
                   }}
                 >
                   {page.title}
