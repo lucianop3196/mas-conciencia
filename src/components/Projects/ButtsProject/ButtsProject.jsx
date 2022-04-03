@@ -53,7 +53,7 @@ export default function ButtsProject() {
       </ul>
       <span>Puntos de recolección:</span>
       <WrappedMap
-        googleMapURL={`https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places&key=${process.env.REACT_MAP_API_KEY}`}
+        googleMapURL={`https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places&key=AIzaSyD51Ca4miCEErHx-Y9kmn6HQdnu8SIUnq0`}
         loadingElement={<div style={{ height: `100%` }} />}
         containerElement={<div style={{ height: `400px` }} />}
         mapElement={<div style={{ height: `100%` }} />}
