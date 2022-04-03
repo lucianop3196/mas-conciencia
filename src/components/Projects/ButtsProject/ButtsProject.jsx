@@ -1,6 +1,12 @@
 import React from "react";
 import { withScriptjs, withGoogleMap } from "react-google-maps";
 import Map from "./Map";
+import cigarro1 from "../../../assets/butts/cigarro1.jpg";
+import cigarro2 from "../../../assets/butts/cigarro2.jpg";
+import lincoln from "../../../assets/butts/lincoln.jpg";
+import salvemosAlPlaneta from "../../../assets/butts/salvemosAlPlaneta.jpg";
+
+export const imagesCarousel = [cigarro1, cigarro2, lincoln, salvemosAlPlaneta];
 
 export default function ButtsProject() {
   const WrappedMap = withScriptjs(withGoogleMap(Map));
