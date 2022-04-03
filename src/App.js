@@ -12,6 +12,30 @@ const theme = createTheme({
   //Personalizamos el objeto global de estilos de material UI
   typography: {
     fontFamily: "Nunito",
+    h1: {
+      fontSize: "6rem",
+    },
+    h2: {
+      fontSize: "5rem",
+    },
+    h3: {
+      fontSize: "4rem",
+    },
+    h4: {
+      fontSize: "3rem",
+    },
+    h5: {
+      fontSize: "2.5rem",
+    },
+    h6: {
+      fontSize: "2rem",
+    },
+    body1: {
+      fontSize: "1.5rem",
+    },
+    body2: {
+      fontSize: "1.25rem",
+    },
   },
   palette: {
     action: {
