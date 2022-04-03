@@ -57,7 +57,6 @@ export default function ButtsProject() {
         loadingElement={<div style={{ height: `100%` }} />}
         containerElement={<div style={{ height: `400px` }} />}
         mapElement={<div style={{ height: `100%` }} />}
-        // year={"333"}
       />
     </div>
   );
