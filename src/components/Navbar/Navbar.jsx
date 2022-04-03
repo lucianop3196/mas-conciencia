@@ -10,6 +10,7 @@ import Container from "@mui/material/Container";
 import Button from "@mui/material/Button";
 import MenuItem from "@mui/material/MenuItem";
 import { Link } from "react-router-dom";
+import logo from "../../assets/logo.jpg";
 
 const pages = [
   { title: "Inicio", route: "/" },
@@ -44,7 +45,7 @@ const Navbar = () => {
               color: "primary.main",
             }}
           >
-            LOGO
+            <img src={logo} alt="LOGO" width={50} />
           </Typography>
 
           <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
@@ -85,10 +86,10 @@ const Navbar = () => {
                         my: 2,
                         display: "block",
                         mx: 4,
-                        color: "#89c51c",
+                        color: "palette.primary.dark",
                         fontWeight: "1000",
                         "&:hover": {
-                          color: "#afe34f",
+                          color: "action.hover",
                         },
                       }}
                     >
@@ -109,7 +110,7 @@ const Navbar = () => {
               color: "primary.main",
             }}
           >
-            LOGO
+            <img src={logo} alt="LOGO" width={50} />
           </Typography>
           <Box
             sx={{
@@ -128,7 +129,7 @@ const Navbar = () => {
                   sx={{
                     display: "block",
                     mx: 4,
-                    color: "#89c51c",
+                    color: "palette.primary.dark",
                     fontWeight: "1000",
                     "&:hover": {
                       color: "action.hover",
