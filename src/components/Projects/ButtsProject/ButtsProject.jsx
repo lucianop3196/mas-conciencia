@@ -33,7 +33,7 @@ export default function ButtsProject() {
     >
       <Box
         component="h2"
-        sx={{ typography: "h4", color: "primary.main", gridArea: "title" }}
+        sx={{ typography: "h4", color: "primary.main", gridArea: "title", my:10 }}
       >
         Campaña de concientización y recolección
       </Box>
