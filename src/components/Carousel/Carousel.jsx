@@ -1,16 +1,34 @@
+import { Box } from "@mui/material";
 import React from "react";
 import Carousel from "react-material-ui-carousel";
 
-export default function PhotoCarousel({ imagesURL }) {
+export default function PhotoCarousel({ imagesURL, matches }) {
   return (
-    <div>
-      <Carousel sx={{width: 450, ml:4}}>
-        {imagesURL?.map((url, i) => (
-          <img key={i} src={url} alt="carousel pic" width={450} height={350} />
-          //   <Img url={url} />
-        ))}
+    <Box component="div">
+      <Carousel sx={{ width:`${matches ? 350 : 100}`, ml: 4 }}>
+        {matches
+          ? imagesURL?.map((url, i) => (
+              <img
+                key={i}
+                src={url}
+                alt="carousel pic"
+                width={450}
+                height={250}
+              />
+              //   <Img url={url} />
+            ))
+          : imagesURL?.map((url, i) => (
+              <img
+                key={i}
+                src={url}
+                alt="carousel pic"
+                width={100}
+                height={100}
+              />
+              //   <Img url={url} />
+            ))}
       </Carousel>
-    </div>
+    </Box>
   );
 }
 

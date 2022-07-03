@@ -7,52 +7,56 @@ import Navbar from "./components/Navbar/Navbar";
 import ButtsProject from "./components/Projects/ButtsProject/ButtsProject";
 import Footer from "./components/Footer/Footer";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
-
-const theme = createTheme({
-  //Personalizamos el objeto global de estilos de material UI
-  typography: {
-    fontFamily: "Nunito",
-    h1: {
-      fontSize: "6rem",
-    },
-    h2: {
-      fontSize: "5rem",
-    },
-    h3: {
-      fontSize: "4rem",
-    },
-    h4: {
-      fontSize: "3rem",
-    },
-    h5: {
-      fontSize: "2.5rem",
-    },
-    h6: {
-      fontSize: "2rem",
-    },
-    body1: {
-      fontSize: "1.5rem",
-    },
-    body2: {
-      fontSize: "1.25rem",
-    },
-  },
-  palette: {
-    action: {
-      hover: "rgba(0,0,0, 0.40)",
-      focus: "rgba(0,0,0, 0.40)",
-    },
-  },
-});
+import useMediaQuery from '@mui/material/useMediaQuery';
 
 function App() {
+
+  const matches = useMediaQuery('(min-width:600px)')
+  
+  const theme = createTheme({
+    //Personalizamos el objeto global de estilos de material UI
+      typography: {
+      fontFamily: "Nunito",
+      h1: {
+        fontSize: `${matches && "6rem"}`,
+      },
+      h2: {
+        fontSize: `${matches && "5rem"}`,
+      },
+      h3: {
+        fontSize: "4rem",
+      },
+      h4: {
+        fontSize: "3rem",
+      },
+      h5: {
+        fontSize: `${matches ? "2.5rem" : "1.3rem"}`,
+      },
+      h6: {
+        fontSize: "2rem",
+      },
+      body1: {
+        fontSize: `${matches ? "1.5rem" : "1rem"}`,
+      },
+      body2: {
+        fontSize: "1.25rem",
+      },
+    },
+    palette: {
+      action: {
+        hover: "rgba(0,0,0, 0.40)",
+        focus: "rgba(0,0,0, 0.40)",
+      },
+    },
+  });
+  
   return (
     <div>
-      <ThemeProvider theme={theme}>
+      <ThemeProvider  theme={theme}>
         <Navbar />
         <Routes>
           <Route exact path="/" element={<Home />} />
-          <Route exact path="/proyectos" element={<Projects />} />
+          <Route exact path="/proyectos" element={<Projects matches={matches} />} />
           <Route exact path="/sobre-nosotros" element={<About />} />
           <Route exact path="/sumate" element={<JoinUs />} />
           <Route
